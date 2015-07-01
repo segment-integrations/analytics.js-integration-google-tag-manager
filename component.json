@@ -2,7 +2,7 @@
   "name": "analytics.js-integration-google-tag-manager",
   "repo": "segment-integrations/analytics.js-integration-google-tag-manager",
   "description": "The Google Tag Manager analytics.js integration.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
