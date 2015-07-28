@@ -9,7 +9,7 @@ describe('Google Tag Manager', function() {
   var analytics;
   var gtm;
   var options = {
-    containerId: 'GTM-K5F78L'
+    containerId: 'GTM-M8M29T'
   };
 
   beforeEach(function() {
