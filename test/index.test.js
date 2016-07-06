@@ -67,6 +67,12 @@ describe('Google Tag Manager', function() {
         analytics.called(window.dataLayer.push, { event: 'some-event' });
       });
 
+      it('should send userId if it exists', function() {
+        analytics.user().id('pablo');
+        analytics.track('some-event');
+        analytics.called(window.dataLayer.push, { userId: 'pablo', event: 'some-event' });
+      });
+
       it('should send event with properties', function() {
         analytics.track('event', { prop: true });
         analytics.called(window.dataLayer.push, { event: 'event', prop: true });
