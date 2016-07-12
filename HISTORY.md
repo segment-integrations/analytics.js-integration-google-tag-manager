@@ -1,3 +1,10 @@
+
+2.1.0 / 2016-07-12
+==================
+
+  * Update Karma to 1.1.0
+  * push userId to data layer for track calls
+
 2.0.0 / 2016-06-21
 ==================
 
