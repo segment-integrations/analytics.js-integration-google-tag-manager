@@ -44,11 +44,13 @@ var customLaunchers = {
   //   browserName: 'internet explorer',
   //   version: '8'
   // },
-  sl_ie_9: {
-    base: 'SauceLabs',
-    browserName: 'internet explorer',
-    version: '9'
-  },
+  // FIXME(han): these started to fail all of a sudden for what seems to be related to our testing packages
+  // https://cloudup.com/cFVvf3ixqdh
+  // sl_ie_9: {
+  //   base: 'SauceLabs',
+  //   browserName: 'internet explorer',
+  //   version: '9'
+  // },
   sl_ie_10: {
     base: 'SauceLabs',
     browserName: 'internet explorer',
