@@ -65,26 +65,26 @@ describe('Google Tag Manager', function() {
       it('should send event', function() {
         var anonId = analytics.user().anonymousId();
         analytics.track('some-event');
-        analytics.called(window.dataLayer.push, { anonymousId: anonId, event: 'some-event' });
+        analytics.called(window.dataLayer.push, { segmentAnonymousId: anonId, event: 'some-event' });
       });
 
       it('should send userId if it exists', function() {
         analytics.user().id('pablo');
         var anonId = analytics.user().anonymousId();
         analytics.track('some-event');
-        analytics.called(window.dataLayer.push, { anonymousId: anonId, userId: 'pablo', event: 'some-event' });
+        analytics.called(window.dataLayer.push, { segmentAnonymousId: anonId, userId: 'pablo', event: 'some-event' });
       });
 
       it('should send anonymousId if it exists', function() {
         analytics.user().anonymousId('el');
         analytics.track('stranger things');
-        analytics.called(window.dataLayer.push, { anonymousId: 'el', event: 'stranger things' });
+        analytics.called(window.dataLayer.push, { segmentAnonymousId: 'el', event: 'stranger things' });
       });
 
       it('should send event with properties', function() {
         var anonId = analytics.user().anonymousId();
         analytics.track('event', { prop: true });
-        analytics.called(window.dataLayer.push, { anonymousId: anonId, event: 'event', prop: true });
+        analytics.called(window.dataLayer.push, { segmentAnonymousId: anonId, event: 'event', prop: true });
       });
     });
 
@@ -104,7 +104,7 @@ describe('Google Tag Manager', function() {
         analytics.page();
         analytics.called(window.dataLayer.push, {
           event: 'Loaded a Page',
-          anonymousId: anonId,
+          segmentAnonymousId: anonId,
           path: window.location.pathname,
           referrer: document.referrer,
           title: document.title,
@@ -118,7 +118,7 @@ describe('Google Tag Manager', function() {
         analytics.page('Name');
         analytics.called(window.dataLayer.push, {
           event: 'Viewed Name Page',
-          anonymousId: anonId,
+          segmentAnonymousId: anonId,
           name: 'Name',
           path: window.location.pathname,
           referrer: document.referrer,
@@ -133,7 +133,7 @@ describe('Google Tag Manager', function() {
         analytics.page('Category', 'Name');
         analytics.called(window.dataLayer.push, {
           event: 'Viewed Category Name Page',
-          anonymousId: anonId,
+          segmentAnonymousId: anonId,
           category: 'Category',
           name: 'Name',
           path: window.location.pathname,
@@ -150,7 +150,7 @@ describe('Google Tag Manager', function() {
         analytics.called(window.dataLayer.push, {
           event: 'Viewed Category Name Page',
           category: 'Category',
-          anonymousId: anonId,
+          segmentAnonymousId: anonId,
           name: 'Name',
           path: window.location.pathname,
           referrer: document.referrer,
