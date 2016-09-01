@@ -8,6 +8,14 @@ var GTM = require('../lib/');
 
 describe('Google Tag Manager', function() {
   var analytics;
+  var analyticsOptions = {
+    initialPageview: {
+      properties: {
+        someId: '1234'
+      }
+    }
+  };
+  var dl;
   var gtm;
   var options = {
     containerId: 'GTM-M8M29T'
@@ -46,15 +54,19 @@ describe('Google Tag Manager', function() {
   describe('after loading', function() {
     beforeEach(function(done) {
       analytics.once('ready', done);
-      analytics.initialize();
+      analytics.initialize({},analyticsOptions);
       analytics.page();
+      dl = window.dataLayer;
     });
 
     it('should push initial gtm.start event', function() {
-      var dl = window.dataLayer;
       analytics.assert(dl);
-      analytics.assert(dl[0].event === 'gtm.js');
-      analytics.assert(typeof dl[0]['gtm.start'] === 'number');
+      analytics.assert(dl[1].event === 'gtm.js');
+      analytics.assert(typeof dl[1]['gtm.start'] === 'number');
+    });
+
+    it('should add pageview properties to dataLayer', function() {
+      analytics.assert(dl[0].someId === '1234');
     });
 
     describe('#track', function() {
