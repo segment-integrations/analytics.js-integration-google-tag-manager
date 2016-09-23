@@ -1,5 +1,5 @@
 {
-  "name": "@segment/analytics.js-integration-google-tag-manager",
+  "name": "@astronomerio/analytics.js-integration-google-tag-manager",
   "description": "The Google Tag Manager analytics.js integration.",
   "version": "2.2.0",
   "keywords": [
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/segment-integrations/analytics.js-integration-google-tag-manager.git"
+    "url": "git+https://github.com/astronomer-integrations/analytics.js-integration-google-tag-manager.git"
   },
-  "author": "Segment <friends@segment.com>",
+  "author": "Astronomer <info@astronomer.io>",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/segment-integrations/analytics.js-integration-google-tag-manager/issues"
+    "url": "https://github.com/astronomer-integrations/analytics.js-integration-google-tag-manager/issues"
   },
-  "homepage": "https://github.com/segment-integrations/analytics.js-integration-google-tag-manager#readme",
+  "homepage": "https://github.com/astronomer-integrations/analytics.js-integration-google-tag-manager#readme",
   "dependencies": {
     "@segment/analytics.js-integration": "^2.1.0",
     "global-queue": "^1.0.1"
