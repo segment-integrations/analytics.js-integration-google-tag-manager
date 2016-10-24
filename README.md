@@ -1,5 +1,5 @@
 ![alt text](/img/logo.png "Google Tag Manager analytics integration")
-# An analytics.js integration for [Google Tag Manager](https://www.google.com/analytics/tag-manager/), by [Astronomer](http://www.astronomer.io/)
+# An analytics.js integration for [Google Tag Manager](https://www.google.com/analytics/tag-manager/)[![Build Status][ci-badge]][ci-link], by [Astronomer](http://www.astronomer.io/)
 
 Available Analytics.js methods for this integration: 
 * Page
