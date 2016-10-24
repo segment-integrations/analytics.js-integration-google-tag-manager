@@ -62,3 +62,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+[Analytics.js]: https://segment.com/docs/libraries/analytics.js/
+[ci-link]: https://circleci.com/gh/segment-integrations/analytics.js-integration-google-tag-manager
+[ci-badge]: https://circleci.com/gh/segment-integrations/analytics.js-integration-google-tag-manager.svg?style=svg
