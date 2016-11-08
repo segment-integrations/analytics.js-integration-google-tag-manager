@@ -1,4 +1,9 @@
 
+2.3.0 / 2016-11-07
+==================
+
+  * Bump analytics.js-integration to ^3.x which includes fix for assumePageview 
+
 2.2.0 / 2016-08-01
 ==================
 
