@@ -33,6 +33,7 @@ describe('Google Tag Manager', function() {
       .assumesPageview()
       .global('dataLayer')
       .option('containerId', '')
+      .option('environment', '')
       .option('trackNamedPages', true)
       .option('trackCategorizedPages', true));
   });
