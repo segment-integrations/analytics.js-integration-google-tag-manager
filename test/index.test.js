@@ -10,7 +10,8 @@ describe('Google Tag Manager', function() {
   var analytics;
   var gtm;
   var options = {
-    containerId: 'GTM-M8M29T'
+    containerId: 'GTM-M8M29T',
+    environment: ''
   };
 
   beforeEach(function() {
@@ -33,6 +34,7 @@ describe('Google Tag Manager', function() {
       .assumesPageview()
       .global('dataLayer')
       .option('containerId', '')
+      .option('environment', '')
       .option('trackNamedPages', true)
       .option('trackCategorizedPages', true));
   });
@@ -45,6 +47,10 @@ describe('Google Tag Manager', function() {
 
   describe('after loading', function() {
     beforeEach(function(done) {
+      options = {
+        containerId: 'GTM-M8M29T',
+        environment: ''
+      };
       analytics.once('ready', done);
       analytics.initialize();
       analytics.page();
@@ -167,6 +173,21 @@ describe('Google Tag Manager', function() {
         analytics.page('Category', 'Name');
         analytics.didNotCall(window.dataLayer.push);
       });
+    });
+  });
+
+  describe('environment options', function() {
+    it('should use the right tag if the environment option is set', function() {
+      gtm.options = {
+        containerId: 'GTM-M8M29T',
+        environment: 'test'
+      };
+
+      var tag = '<script src="http://www.googletagmanager.com/gtm.js?id=' + gtm.options.containerId + '&l=dataLayer&gtm_preview=' + gtm.options.environment + '">';
+      analytics.spy(gtm, 'load');
+      analytics.initialize();
+      analytics.page();
+      analytics.loaded(tag);
     });
   });
 });
