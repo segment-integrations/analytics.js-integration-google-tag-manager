@@ -31,7 +31,6 @@ describe('Google Tag Manager', function() {
 
   it('should store the correct settings', function() {
     analytics.compare(GTM, integration('Google Tag Manager')
-      .assumesPageview()
       .global('dataLayer')
       .option('containerId', '')
       .option('environment', '')
