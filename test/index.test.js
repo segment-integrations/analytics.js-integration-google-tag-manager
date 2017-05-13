@@ -34,6 +34,7 @@ describe('Google Tag Manager', function() {
       .global('dataLayer')
       .option('containerId', '')
       .option('environment', '')
+      .option('trackAllPages', false)
       .option('trackNamedPages', true)
       .option('trackCategorizedPages', true));
   });
